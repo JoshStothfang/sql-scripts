@@ -1,4 +1,4 @@
-SELECT DISTINCT v.VendorName, Count(DISTINCT il.AccountNo) AS NumAccounts
+SELECT v.VendorName, Count(DISTINCT il.AccountNo) AS NumAccounts
 FROM InvoiceLineItems il
 JOIN Invoices i
     ON il.InvoiceID = i.InvoiceID
